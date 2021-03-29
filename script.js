@@ -24,21 +24,33 @@ console.log(pariDispari);
 //e inserisce un numero da 1 a 5.
 var NumeroUtente = parseInt(prompt('inserisci un numero da 1 a 5.').trim().toLowerCase());
 console.log(NumeroUtente);
-//Sommiamo i due numeri
 var NumeroComputer = numeroRandom();
+//Sommiamo i due numeri
 var somma;
-somma = NumeroComputer + NumeroUtente;
-PariODispari();
-//Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function PariODispari(){
-    if(somma % 2 === 0){
-    console.log('pari');
-}else{
-    console.log(dispari)
-}
-}
-somma = NumeroComputer + NumeroUtente;
+somma = NumeroUtente + NumeroComputer;
 console.log(somma);
+
+
+//Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+ /* if(somma % 2 ==0  && pariDispari === 'pari'){
+     console.log('hai vinto')
+ }else if(somma % 2 !== 0 && pariDispari === 'dispari'){
+    console.log('hai vinto');
+ }else{
+     console.log('hai perso')
+ } */
+ if (pariODispari(somma)=== pariDispari){
+    console.log('hai vinto');
+ }else{
+    console.log('hai perso');
+ }
+function pariODispari(a){
+    if(a % 2 === 0){
+        a === 'pari';
+    }else{
+        a ==='dispari';
+    }
+}
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function numeroRandom(){
     var rand = parseInt(Math.floor(Math.random()*5 +1));
