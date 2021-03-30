@@ -20,36 +20,36 @@
 
 //L’utente sceglie pari o dispari
 var pariDispari = prompt('Pari o dispari?').trim().toLowerCase();
-console.log(pariDispari);
+console.log('Hai scelto: ' + pariDispari);
 //e inserisce un numero da 1 a 5.
 var NumeroUtente = parseInt(prompt('inserisci un numero da 1 a 5.').trim().toLowerCase());
-console.log(NumeroUtente);
+console.log('Il numero che hai scritto è ' + NumeroUtente);
 var NumeroComputer = numeroRandom();
+console.log('Il numero del computer è ' + NumeroComputer)
 //Sommiamo i due numeri
 var somma;
 somma = NumeroUtente + NumeroComputer;
-console.log(somma);
-
+console.log('La somma è ' + somma);
+console.log('Il risultato è ' +  pariODispari(somma));
 
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
- /* if(somma % 2 ==0  && pariDispari === 'pari'){
+  /* if(somma % 2 ==0  && pariDispari === 'pari'){
      console.log('hai vinto')
  }else if(somma % 2 !== 0 && pariDispari === 'dispari'){
     console.log('hai vinto');
  }else{
      console.log('hai perso')
- } */
- if (pariODispari(somma)=== pariDispari){
-    console.log('hai vinto');
- }else{
-    console.log('hai perso');
- }
-function pariODispari(a){
-    if(a % 2 === 0){
-        a === 'pari';
-    }else{
-        a ==='dispari';
+ }  */
+if (pariODispari(somma)=== pariDispari){
+    console.log('Hai vinto!');
+}else{
+    console.log('Hai perso!');
+}  
+function pariODispari(num){
+    if(num % 2 === 0){
+        return 'pari';
     }
+    return 'dispari';
 }
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function numeroRandom(){
